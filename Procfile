@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/wgtassign -Dhttp.port=${PORT} -Dconfig.resource=application.heroku.conf

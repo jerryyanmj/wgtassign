@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                    controllers.Application.index
+
+# Prompt APIs
+GET         /prompt              controllers.PromptController.allPrompts
+GET         /prompt/any          controllers.PromptController.anyPrompt
+GET         /prompt/:id         controllers.PromptController.prompt(id: Long)
+POST        /prompt              controllers.PromptController.newPrompt
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file        controllers.Assets.at(path="/public", file)
